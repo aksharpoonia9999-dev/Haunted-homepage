@@ -1,0 +1,759 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Haunted</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./assets/images/Meta Bully.webp"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+      @theme {
+        --color-regal-black: #000a1a;
+        --color-pure-white: #ffffff;
+        --color-primary-navy: #001d49;
+        --color-card-navy: #031227;
+        --color-timeline-navy: #001930;
+        --color-accent-blue: #009dff;
+        --color-text-muted: #b2b5ba;
+        --color-footer-muted: #9aa0a9;
+        --color-card-text: #b3b7be;
+
+        --font-poppins: "Poppins", sans-serif;
+
+        --leading-100: 100%;
+        --leading-124: 124%;
+        --leading-130: 130%;
+        --leading-136: 136%;
+        --leading-140: 140%;
+        --leading-150: 150%;
+        --leading-160: 160%;
+        --leading-183: 183%;
+        --leading-28px: 28px;
+        --leading-34px: 34px;
+        --leading-41px: 41px;
+
+        --radius-pill: 45.5px;
+        --radius-faq: 200px;
+        --radius-card: 20px;
+      }
+    </style>
+  </head>
+
+  <body class="bg-regal-black font-poppins overflow-x-hidden">
+    <section
+      class="bg-[url('./assets/images/bg.webp')] bg-center px-4 sm:px-5 bg-cover w-full min-h-[600px] sm:min-h-[700px] md:min-h-[900px] lg:min-h-[1080px]"
+    >
+      <header class="w-full max-w-[1329px] mx-auto pt-[10px] sm:pt-[26px]">
+        <nav class="flex items-center justify-between">
+          <h1
+            class="w-fit font-semibold text-[21.74px] leading-150 text-white cursor-pointer"
+          >
+            Logo
+          </h1>
+
+          <ul
+            id="navlist"
+            class="flex items-center gap-[80px] m-0 p-0 list-none max-[991px]:fixed max-[991px]:top-0 max-[991px]:right-0 max-[991px]:z-[1000] max-[991px]:w-[60vw] max-[991px]:h-screen max-[991px]:bg-black max-[991px]:flex-col max-[991px]:justify-center max-[991px]:items-center max-[991px]:gap-[35px] max-[991px]:opacity-0 max-[991px]:invisible max-[991px]:pointer-events-none max-[991px]:translate-x-full max-[991px]:transition-all max-[991px]:duration-500 max-[991px]:ease-in-out"
+          ></ul>
+
+          <button
+            id="menuToggle"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+            class="hidden max-[991px]:flex flex-col justify-center items-center gap-[5px] relative z-[1001] w-[32px] h-[32px] p-0 border-none bg-transparent cursor-pointer"
+          >
+            <span
+              class="menu-line block w-[28px] h-[3px] bg-white rounded-full transition-all duration-300"
+            ></span>
+
+            <span
+              class="menu-line block w-[28px] h-[3px] bg-white rounded-full transition-all duration-300"
+            ></span>
+
+            <span
+              class="menu-line block w-[28px] h-[3px] bg-white rounded-full transition-all duration-300"
+            ></span>
+          </button>
+        </nav>
+      </header>
+
+      <div
+        class="container max-w-[1329px] mx-auto pt-[100px] sm:pt-[180px] lg:pt-[261.38px]"
+      >
+        <h1
+          class="max-w-[515px] w-full font-normal text-[38px] sm:text-[50px] lg:text-[70px] leading-130 lg:leading-124 text-pure-white pb-5 sm:pb-[27px]"
+        >
+          Vitae nunc,
+          <span
+            class="font-bold text-[38px] sm:text-[50px] lg:text-[70px] leading-130 lg:leading-124"
+            >blandit a odio</span
+          >
+        </h1>
+        <p
+          class="max-w-[547px] font-medium text-[16px] sm:text-[18px] lg:text-[20px] leading-28px sm:leading-34px lg:leading-41px text-pure-white pb-8 sm:pb-[46px]"
+        >
+          Semper in egestas risus id tempus. Pellentesque dolor eros
+          sollicitudin feugiat ut odio semper. Mattis fermentum eget ut
+          vestibulum dolor diam
+        </p>
+        <button
+          class="group relative isolate w-[180px] sm:w-[225px] h-[55px] sm:h-[69px] overflow-hidden rounded-pill border-2 border-primary-navy bg-pure-white font-medium text-[18px] sm:text-[22px] lg:text-[25px] leading-100 text-primary-navy cursor-pointer transition-all duration-500"
+        >
+          <span
+            class="absolute inset-[2px] z-0 rounded-pill bg-primary-navy scale-x-0 origin-left transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-x-100"
+          ></span>
+
+          <span
+            class="absolute inset-0 z-10 rounded-pill opacity-0 shadow-[inset_0_0_20px_rgba(255,255,255,0.12)] transition-opacity duration-700 group-hover:opacity-100"
+          ></span>
+
+          <span
+            class="relative z-20 transition-colors duration-500 ease-out group-hover:text-pure-white"
+          >
+            Get Started
+          </span>
+        </button>
+      </div>
+    </section>
+
+    <div class="sections relative overflow-hidden">
+      <section
+        class="pb-[60px] md:pb-[80px] lg:pb-[127.64px] px-4 sm:px-5 relative"
+      >
+        <div class="container max-w-[1329px] mx-auto">
+          <div
+            class="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-0"
+          >
+            <div
+              class="w-full max-w-[320px] sm:max-w-[450px] lg:max-w-[574px] aspect-square shrink-0 relative"
+            >
+              <img
+                id="changing-img"
+                src="./assets/images/Mint Your Bat.webp"
+                class="w-full h-full object-contain"
+                alt="Mint Your Bat"
+              />
+              <div
+                class="cirle size-[clamp(320px,92vw,337px)] bg-accent-blue rounded-full absolute top-1/2 left-1/2 blur-[300px] -z-20 -translate-y-1/2 -translate-x-1/2"
+              ></div>
+            </div>
+
+            <div
+              class="flex flex-col lg:mt-[156px] lg:mr-[173px] text-center lg:text-left"
+            >
+              <h1
+                class="max-w-[338px] w-full font-semibold text-[38px] sm:text-[45px] lg:text-[50px] leading-136 text-pure-white pb-[35px] lg:pb-[48px] mx-auto lg:mx-0"
+              >
+                Mint Your Bat
+              </h1>
+
+              <h2
+                class="max-w-[228px] w-full font-medium text-[24px] sm:text-[28px] lg:text-3xl leading-136 text-pure-white mx-auto lg:mx-0"
+              >
+                Minting: 1,5 SOL
+              </h2>
+              <span
+                class="max-w-[98px] w-full opacity-50 font-normal text-base leading-136 text-pure-white line-through pb-[21px] mx-auto lg:mx-0"
+                >Before 2 SOL</span
+              >
+
+              <h2
+                class="max-w-[273px] w-full font-medium text-[24px] sm:text-[28px] lg:text-3xl leading-136 text-pure-white mx-auto lg:mx-0"
+              >
+                Whitelist: 0,88 SOL
+              </h2>
+              <span
+                class="max-w-[94px] w-full opacity-50 font-normal text-base leading-136 text-pure-white line-through pb-[45px] lg:pb-[63px] mx-auto lg:mx-0"
+                >Before 1 SOL</span
+              >
+
+              <button
+                class="group relative isolate w-[149px] h-[44px] overflow-hidden rounded-pill border-none bg-pure-white font-medium text-base leading-100 text-primary-navy cursor-pointer mx-auto lg:mx-0"
+              >
+                <!-- Navy inner fill -->
+                <span
+                  class="absolute inset-[2px] z-0 origin-left scale-x-0 rounded-pill bg-primary-navy transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-x-100"
+                ></span>
+
+                <!-- Subtle inner highlight -->
+                <span
+                  class="absolute inset-0 z-10 rounded-pill opacity-0 shadow-[inset_0_0_16px_rgba(255,255,255,0.12)] transition-opacity duration-700 group-hover:opacity-100"
+                ></span>
+
+                <!-- Text -->
+                <span
+                  class="relative z-20 transition-colors duration-500 ease-out group-hover:text-pure-white"
+                >
+                  Coming soon
+                </span>
+              </button>
+              <div
+                class="flex items-center justify-center lg:justify-start gap-[23.88px] mt-[52.1px]"
+              >
+                <a
+                  class="hover:-translate-y-1 transition-all duration-300 ease-in-out"
+                  target="_blank"
+                  href="https://www.instagram.com/"
+                >
+                  <svg
+                    width="33"
+                    height="33"
+                    viewBox="0 0 33 33"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16.1287 10.7528C13.1663 10.7528 10.7488 13.1704 10.7488 16.1327C10.7488 19.0951 13.1663 21.5126 16.1287 21.5126C19.091 21.5126 21.5085 19.0951 21.5085 16.1327C21.5085 13.1704 19.091 10.7528 16.1287 10.7528ZM32.2642 16.1327C32.2642 13.9049 32.2844 11.6972 32.1593 9.47347C32.0342 6.89049 31.4449 4.59809 29.5561 2.70929C27.6633 0.816453 25.3749 0.231247 22.7919 0.106134C20.5641 -0.0189791 18.3565 0.00120046 16.1327 0.00120046C13.9049 0.00120046 11.6972 -0.0189791 9.47347 0.106134C6.89049 0.231247 4.59809 0.820489 2.70929 2.70929C0.816453 4.60213 0.231247 6.89049 0.106134 9.47347C-0.0189791 11.7013 0.00120046 13.9089 0.00120046 16.1327C0.00120046 18.3565 -0.0189791 20.5682 0.106134 22.792C0.231247 25.3749 0.820489 27.6673 2.70929 29.5561C4.60213 31.449 6.89049 32.0342 9.47347 32.1593C11.7013 32.2844 13.9089 32.2642 16.1327 32.2642C18.3605 32.2642 20.5682 32.2844 22.7919 32.1593C25.3749 32.0342 27.6673 31.4449 29.5561 29.5561C31.449 27.6633 32.0342 25.3749 32.1593 22.792C32.2884 20.5682 32.2642 18.3605 32.2642 16.1327ZM16.1287 24.4103C11.5479 24.4103 7.85103 20.7135 7.85103 16.1327C7.85103 11.552 11.5479 7.85507 16.1287 7.85507C20.7094 7.85507 24.4063 11.552 24.4063 16.1327C24.4063 20.7135 20.7094 24.4103 16.1287 24.4103ZM24.7453 9.44925C23.6758 9.44925 22.8121 8.58557 22.8121 7.51605C22.8121 6.44654 23.6758 5.58286 24.7453 5.58286C25.8148 5.58286 26.6785 6.44654 26.6785 7.51605C26.6788 7.77001 26.6291 8.02154 26.532 8.25623C26.435 8.49092 26.2926 8.70416 26.113 8.88374C25.9334 9.06332 25.7202 9.20571 25.4855 9.30274C25.2508 9.39978 24.9993 9.44957 24.7453 9.44925Z"
+                      fill="white"
+                    />
+                  </svg>
+                </a>
+
+                <a
+                  class="hover:-translate-y-1 transition-all duration-300 ease-in-out"
+                  target="_blank"
+                  href="https://x.com/?lang=en-in"
+                >
+                  <svg
+                    width="35"
+                    height="28"
+                    viewBox="0 0 35 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M34.3343 3.31083C33.0717 3.87031 31.7153 4.24835 30.2894 4.41922C31.7607 3.53885 32.8614 2.15324 33.3862 0.520955C32.0039 1.34202 30.491 1.91997 28.9134 2.22966C27.8524 1.09687 26.4472 0.346042 24.9158 0.0937403C23.3844 -0.158561 21.8126 0.101781 20.4443 0.834348C19.076 1.56691 17.9879 2.73072 17.3489 4.14507C16.7098 5.55943 16.5556 7.1452 16.9101 8.65619C14.1092 8.51556 11.3691 7.78755 8.86775 6.51942C6.36638 5.25128 4.15962 3.47136 2.39067 1.29516C1.78582 2.33853 1.43803 3.54823 1.43803 4.83656C1.43736 5.99636 1.72297 7.13839 2.26952 8.16132C2.81607 9.18426 3.60666 10.0565 4.57116 10.7006C3.4526 10.665 2.35872 10.3628 1.38057 9.81902V9.90975C1.38046 11.5364 1.94313 13.113 2.97312 14.372C4.0031 15.631 5.43696 16.495 7.03139 16.8171C5.99374 17.098 4.90585 17.1393 3.84987 16.9381C4.29973 18.3378 5.176 19.5617 6.35602 20.4386C7.53604 21.3155 8.96073 21.8014 10.4306 21.8283C7.93539 23.7872 4.85375 24.8497 1.68148 24.845C1.11955 24.8452 0.55809 24.8124 0 24.7467C3.22004 26.8171 6.96839 27.9159 10.7966 27.9116C23.7555 27.9116 30.8398 17.1785 30.8398 7.86989C30.8398 7.56746 30.8323 7.26201 30.8186 6.95959C32.1966 5.96306 33.3861 4.72904 34.3313 3.31536L34.3343 3.31083Z"
+                      fill="white"
+                    />
+                  </svg>
+                </a>
+                <a
+                  class="hover:-translate-y-1 transition-all duration-300 ease-in-out"
+                  target="_blank"
+                  href="https://discord.com/"
+                >
+                  <svg
+                    width="33"
+                    height="25"
+                    viewBox="0 0 33 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M27.9028 2.05033C25.8016 1.10272 23.5493 0.40232 21.194 0.00405158C21.173 2.48325e-05 21.1513 0.00261981 21.1319 0.0114777C21.1125 0.0203355 21.0963 0.0350181 21.0855 0.0534918C20.7971 0.560254 20.4758 1.22083 20.2505 1.7427C17.7526 1.36948 15.213 1.36948 12.715 1.7427C12.4642 1.16433 12.1813 0.600389 11.8677 0.0534918C11.8571 0.0347906 11.841 0.019776 11.8216 0.0104515C11.8022 0.00112705 11.7804 -0.00206387 11.7592 0.00130477C9.40528 0.399573 7.15301 1.09998 5.05043 2.04895C5.03234 2.05654 5.017 2.06948 5.00648 2.08603C0.73265 8.36906 -0.438808 14.4969 0.136621 20.5478C0.138222 20.5626 0.142822 20.577 0.150141 20.59C0.15746 20.603 0.167345 20.6143 0.179194 20.6234C2.67372 22.4395 5.45602 23.823 8.40961 24.7159C8.4302 24.7222 8.45223 24.7222 8.47281 24.7159C8.49339 24.7095 8.51157 24.6971 8.52497 24.6802C9.15946 23.8287 9.72527 22.9292 10.2087 21.9843C10.2375 21.9294 10.2101 21.8635 10.1524 21.8415C9.26521 21.5074 8.40561 21.1042 7.58149 20.6357C7.56668 20.6273 7.5542 20.6153 7.54518 20.6008C7.53615 20.5863 7.53085 20.5699 7.52976 20.5528C7.52867 20.5358 7.53182 20.5188 7.53894 20.5033C7.54605 20.4878 7.55689 20.4743 7.5705 20.4641C7.74354 20.3363 7.91658 20.2031 8.08139 20.0699C8.09622 20.0579 8.11409 20.0503 8.133 20.0479C8.15191 20.0454 8.17113 20.0483 8.18851 20.0562C13.5816 22.4787 19.4224 22.4787 24.7523 20.0562C24.7698 20.0479 24.7892 20.0446 24.8084 20.0468C24.8275 20.049 24.8457 20.0565 24.8608 20.0685C25.0256 20.2031 25.1973 20.3363 25.3717 20.4641C25.3855 20.4741 25.3965 20.4874 25.4038 20.5028C25.4112 20.5181 25.4146 20.5351 25.4138 20.5521C25.4129 20.5691 25.4079 20.5856 25.3992 20.6002C25.3904 20.6148 25.3781 20.627 25.3635 20.6357C24.5422 21.1081 23.688 21.5078 22.7912 21.8401C22.7774 21.8451 22.7649 21.853 22.7544 21.8633C22.7439 21.8735 22.7357 21.8858 22.7304 21.8995C22.7251 21.9131 22.7227 21.9278 22.7235 21.9424C22.7243 21.957 22.7282 21.9713 22.7349 21.9843C23.2293 22.9278 23.7951 23.826 24.4172 24.6788C24.4302 24.6963 24.4482 24.7094 24.4689 24.7163C24.4895 24.7232 24.5118 24.7235 24.5326 24.7173C27.4913 23.8269 30.2781 22.4427 32.7754 20.6234C32.7876 20.6148 32.7978 20.6038 32.8054 20.591C32.813 20.5782 32.8177 20.564 32.8193 20.5492C33.506 13.5534 31.6685 7.47501 27.9454 2.08878C27.9362 2.07128 27.9211 2.05763 27.9028 2.05033ZM11.0148 16.8632C9.39155 16.8632 8.05255 15.3951 8.05255 13.5946C8.05255 11.7928 9.36546 10.3261 11.0148 10.3261C12.6766 10.3261 14.0032 11.8052 13.9771 13.5946C13.9771 15.3964 12.6642 16.8632 11.0148 16.8632ZM21.9672 16.8632C20.3426 16.8632 19.0049 15.3951 19.0049 13.5946C19.0049 11.7928 20.3165 10.3261 21.9672 10.3261C23.629 10.3261 24.9556 11.8052 24.9295 13.5946C24.9295 15.3964 23.6303 16.8632 21.9672 16.8632Z"
+                      fill="white"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div
+        class="circle absolute size-[337px] bg-accent-blue rounded-full right-[-200px] blur-[250px] -z-20"
+      ></div>
+
+      <section class="px-4 sm:px-5 pb-4">
+        <div class="container max-w-[1358px] mx-auto">
+          <div
+            id="card"
+            class="grid xl:grid-cols-3 min-[919px]:grid-cols-2 gap-x-6 lg:gap-y-[41px] md:gap-y-8 gap-y-6 grid-cols-1 justify-items-center"
+          ></div>
+        </div>
+      </section>
+    </div>
+
+    <div class="sections-bottom relative overflow-hidden">
+      <section
+        class="px-4 sm:px-5 py-[60px] md:py-[80px] lg:pt-[131px] lg:pb-[141px] relative"
+      >
+        <div
+          class="container max-w-[938.58px] mx-auto flex flex-col items-center"
+        >
+          <h1
+            class="max-w-[252px] w-full font-semibold text-[36px] sm:text-[42px] md:text-[50px] leading-136 text-pure-white mb-[50px] md:mb-[63px]"
+          >
+            Roadmap
+          </h1>
+
+          <div class="max-w-[938.58px] w-full flex flex-row md:justify-between">
+            <div class="md:flex hidden flex-col items-start justify-center">
+              <div class="max-w-[404.58px] text-right">
+                <h2 class="font-semibold text-3xl leading-150 text-pure-white">
+                  Q-1, 2022
+                </h2>
+                <p
+                  class="font-normal text-base leading-183 text-text-muted mt-6"
+                >
+                  Blandit sed penatibus elit tortor fermentum velit donec. Id
+                  eleifend volutpat dolor netus auctor at. Volutpat sed auctor
+                  non in commodo, felis viverra risus tristique.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex flex-col justify-between h-[795px] relative mx-3">
+              <div
+                class="w-[64.92px] h-[64.92px] rounded-full bg-timeline-navy flex items-center justify-center -mt-[11px]"
+              >
+                <div
+                  class="w-[43px] h-[43px] rounded-full border-[3.23px] border-pure-white bg-accent-blue z-20"
+                ></div>
+              </div>
+              <div
+                class="w-[64.92px] h-[64.92px] rounded-full bg-timeline-navy flex items-center justify-center"
+              >
+                <div
+                  class="w-[43px] h-[43px] rounded-full border-[3.23px] border-pure-white bg-accent-blue z-20"
+                ></div>
+              </div>
+              <div
+                class="w-[64.92px] h-[64.92px] rounded-full bg-timeline-navy flex items-center justify-center"
+              >
+                <div
+                  class="w-[43px] h-[43px] rounded-full border-[3.23px] border-pure-white bg-accent-blue z-20"
+                ></div>
+              </div>
+
+              <div class="absolute left-[50%] top-[2%]">
+                <svg
+                  width="2"
+                  height="740"
+                  viewBox="0 0 2 740"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <line
+                    x1="1"
+                    y1="1"
+                    x2="0.999968"
+                    y2="739"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-dasharray="15 15"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            <div class="flex flex-col items-end justify-between min-h-[924px]">
+              <div class="max-w-[404.58px] text-left">
+                <h2
+                  class="max-w-[138px] font-semibold text-3xl leading-150 text-pure-white"
+                >
+                  Q-1, 2022
+                </h2>
+                <p
+                  class="font-normal text-base leading-183 text-text-muted mt-6"
+                >
+                  Blandit sed penatibus elit tortor fermentum velit donec. Id
+                  eleifend volutpat dolor netus auctor at. Volutpat sed auctor
+                  non in commodo, felis viverra risus tristique.
+                </p>
+              </div>
+
+              <div class="flex flex-col justify-center md:hidden">
+                <div class="max-w-[404.58px] text-left">
+                  <h2
+                    class="font-semibold text-3xl leading-150 text-pure-white"
+                  >
+                    Q-1, 2022
+                  </h2>
+                  <p
+                    class="font-normal text-base leading-183 text-text-muted mt-6"
+                  >
+                    Blandit sed penatibus elit tortor fermentum velit donec. Id
+                    eleifend volutpat dolor netus auctor at. Volutpat sed auctor
+                    non in commodo, felis viverra risus tristique.
+                  </p>
+                </div>
+              </div>
+
+              <div class="max-w-[404.58px] text-left">
+                <h2
+                  class="max-w-[138px] font-semibold text-3xl leading-150 text-pure-white"
+                >
+                  Q-1, 2022
+                </h2>
+                <p
+                  class="font-normal text-base leading-183 text-text-muted mt-6"
+                >
+                  Blandit sed penatibus elit tortor fermentum velit donec. Id
+                  eleifend volutpat dolor netus auctor at. Volutpat sed auctor
+                  non in commodo, felis viverra risus tristique.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div
+        class="cirle size-[clamp(320px,92vw,337px)] bg-accent-blue rounded-full absolute top-0 left-0 blur-[300px] -z-20 translate-y-1/2 -translate-x-1/2"
+      ></div>
+
+      <div
+        class="cirle size-[clamp(320px,92vw,337px)] bg-accent-blue rounded-full absolute top-2/3 right-0 translate-x-1/2 blur-[250px]"
+      ></div>
+
+      <section class="px-4 sm:px-5 relative pb-4">
+        <div
+          class="container max-w-[786px] mx-auto text-center pt-[60px] md:pt-[80px] lg:pt-[141px]"
+        >
+          <h1
+            class="font-medium text-[20px] sm:text-[25px] lg:text-[30px] leading-140 sm:leading-150 text-white"
+          >
+            And this just the begining , the team is working on more suprises
+            for our community. Buddybullies stronger together !!
+          </h1>
+        </div>
+        <div class="mx-auto w-[129px] mt-[70px] sm:mt-[90px] lg:mt-[110px]">
+          <h1
+            class="font-semibold text-[36px] sm:text-[42px] lg:text-[50px] leading-136 text-white"
+          >
+            FAQs
+          </h1>
+        </div>
+
+        <div
+          class="faq gap-[20px] sm:gap-[26px] mt-[35px] sm:mt-[47px] flex flex-col"
+        >
+          <div class="faqitem">
+            <button
+              class="faqbutton max-w-[830px] w-full mx-auto border-none rounded-faq bg-card-navy flex items-center justify-between cursor-pointer py-4 sm:py-5 px-3 sm:pr-[33px] sm:pl-[32px] gap-4"
+            >
+              <h1
+                class="font-medium text-[16px] sm:text-[18px] lg:text-xl leading-140 sm:leading-100 text-pure-white text-left"
+              >
+                What’s the blockchain the buddybullies call home ?
+              </h1>
+              <span class="shrink-0">
+                <svg
+                  class="transition-all duration-300"
+                  width="14"
+                  height="8"
+                  viewBox="0 0 14 8"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2 1.04907e-06L7 5L12 1.74846e-07L14 1L7 8L-6.11959e-07 1L2 1.04907e-06Z"
+                    fill="white"
+                  />
+                </svg>
+              </span>
+            </button>
+            <div
+              class="faqcontent max-w-[830px] mx-auto px-5 sm:pl-[32px] grid grid-rows-[0fr] transition-all duration-300"
+            >
+              <div class="overflow-hidden">
+                <p
+                  class="font-medium opacity-70 text-[14px] sm:text-[15px] lg:text-base leading-160 sm:leading-140 text-white mt-5"
+                >
+                  Hac varius turpis sit pulvinar lorem magna velit sit. Dapibus
+                  mattis adipiscing ornare arcu vitae enim. Proin turpis enim
+                  egestas sed in accumsan, feugiat neque turpis. Fringilla dui
+                  donec nullam faucibus vitae non, integer. Non.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faqitem">
+            <button
+              class="faqbutton max-w-[830px] w-full mx-auto border-none rounded-faq bg-card-navy flex items-center justify-between cursor-pointer py-4 sm:py-5 px-3 sm:pr-[33px] sm:pl-[32px] gap-4"
+            >
+              <h1
+                class="font-medium text-[16px] sm:text-[18px] lg:text-xl leading-140 sm:leading-100 text-pure-white text-left"
+              >
+                What’s the blockchain the buddybullies call home ?
+              </h1>
+              <span class="shrink-0">
+                <svg
+                  class="transition-all duration-300"
+                  width="14"
+                  height="8"
+                  viewBox="0 0 14 8"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2 1.04907e-06L7 5L12 1.74846e-07L14 1L7 8L-6.11959e-07 1L2 1.04907e-06Z"
+                    fill="white"
+                  />
+                </svg>
+              </span>
+            </button>
+            <div
+              class="faqcontent max-w-[830px] mx-auto px-5 sm:pl-[32px] grid grid-rows-[0fr] transition-all duration-300"
+            >
+              <div class="overflow-hidden">
+                <p
+                  class="font-medium opacity-70 text-[14px] sm:text-[15px] lg:text-base leading-160 sm:leading-140 text-white mt-5"
+                >
+                  Hac varius turpis sit pulvinar lorem magna velit sit. Dapibus
+                  mattis adipiscing ornare arcu vitae enim. Proin turpis enim
+                  egestas sed in accumsan, feugiat neque turpis. Fringilla dui
+                  donec nullam faucibus vitae non, integer. Non.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faqitem">
+            <button
+              class="faqbutton max-w-[830px] w-full mx-auto border-none rounded-faq bg-card-navy flex items-center justify-between cursor-pointer py-4 sm:py-5 px-3 sm:pr-[33px] sm:pl-[32px] gap-4"
+            >
+              <h1
+                class="font-medium text-[16px] sm:text-[18px] lg:text-xl leading-140 sm:leading-100 text-pure-white text-left"
+              >
+                What’s the blockchain the buddybullies call home ?
+              </h1>
+              <span class="shrink-0">
+                <svg
+                  class="transition-all duration-300"
+                  width="14"
+                  height="8"
+                  viewBox="0 0 14 8"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2 1.04907e-06L7 5L12 1.74846e-07L14 1L7 8L-6.11959e-07 1L2 1.04907e-06Z"
+                    fill="white"
+                  />
+                </svg>
+              </span>
+            </button>
+            <div
+              class="faqcontent max-w-[830px] mx-auto px-5 sm:pl-[32px] grid grid-rows-[0fr] transition-all duration-300"
+            >
+              <div class="overflow-hidden">
+                <p
+                  class="font-medium opacity-70 text-[14px] sm:text-[15px] lg:text-base leading-160 sm:leading-140 text-white mt-5"
+                >
+                  Hac varius turpis sit pulvinar lorem magna velit sit. Dapibus
+                  mattis adipiscing ornare arcu vitae enim. Proin turpis enim
+                  egestas sed in accumsan, feugiat neque turpis. Fringilla dui
+                  donec nullam faucibus vitae non, integer. Non.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faqitem">
+            <button
+              class="faqbutton max-w-[830px] w-full mx-auto border-none rounded-faq bg-card-navy flex items-center justify-between cursor-pointer py-4 sm:py-5 px-3 sm:pr-[33px] sm:pl-[32px] gap-4"
+            >
+              <h1
+                class="font-medium text-[16px] sm:text-[18px] lg:text-xl leading-140 sm:leading-100 text-pure-white text-left"
+              >
+                What’s the blockchain the buddybullies call home ?
+              </h1>
+              <span class="shrink-0">
+                <svg
+                  class="transition-all duration-300"
+                  width="14"
+                  height="8"
+                  viewBox="0 0 14 8"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2 1.04907e-06L7 5L12 1.74846e-07L14 1L7 8L-6.11959e-07 1L2 1.04907e-06Z"
+                    fill="white"
+                  />
+                </svg>
+              </span>
+            </button>
+            <div
+              class="faqcontent max-w-[830px] mx-auto px-5 sm:pl-[32px] grid grid-rows-[0fr] transition-all duration-300"
+            >
+              <div class="overflow-hidden">
+                <p
+                  class="font-medium opacity-70 text-[14px] sm:text-[15px] lg:text-base leading-160 sm:leading-140 text-white mt-5"
+                >
+                  Hac varius turpis sit pulvinar lorem magna velit sit. Dapibus
+                  mattis adipiscing ornare arcu vitae enim. Proin turpis enim
+                  egestas sed in accumsan, feugiat neque turpis. Fringilla dui
+                  donec nullam faucibus vitae non, integer. Non.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section>
+      <div
+        class="container max-w-[1035px] mx-auto text-center pt-[60px] md:pt-[80px] lg:pt-[121px]"
+      >
+        <h1 class="font-semibold text-[50px] leading-136 text-white pb-[26px]">
+          Our Team
+        </h1>
+        <div
+          id="ourTeam"
+          class="grid lg:grid-cols-3 sm:grid-cols-2 gap-[51px]"
+        ></div>
+      </div>
+    </section>
+
+    <footer
+      class="bg-[url('./assets/images/Footer.webp')] bg-cover bg-center w-full min-h-[625px] pt-[60px] md:pt-[140px] lg:pt-[221px] pb-5 sm:pb-10 px-5"
+    >
+      <div class="contain-inline-size max-w-[1365px] mx-auto px-4">
+        <h1
+          class="font-semibold text-[36px] sm:text-[42px] lg:text-[50px] leading-124 text-center text-white"
+        >
+          JOIN US
+        </h1>
+
+        <div
+          class="flex md:flex-row flex-col justify-between items-center md:items-start gap-14 md:gap-8 mt-[70px] sm:mt-[90px] lg:mt-[106px]"
+        >
+          <div class="text-center md:text-left">
+            <h2
+              class="font-medium text-[26px] sm:text-[30px] leading-124 text-white"
+            >
+              LOGO
+            </h2>
+            <p
+              class="max-w-[388px] font-normal text-[14px] sm:text-base leading-150 text-footer-muted mt-[21px]"
+            >
+              Aenean arcu sed rhoncus sapien euismod cursus morbi lacus,
+              blandit. Placerat tortor duis fames cras pellentesque dui
+              adipiscing neque gravida. Sociis neque consectetur id quis
+              pharetra.
+            </p>
+            <h1
+              class="font-normal text-sm sm:text-base leading-150 text-white mt-5"
+            >
+              <a
+                href="mailto:Email@gmail.com"
+                class="relative inline-block after:absolute after:left-0 after:bottom-[-4px] after:w-0 after:h-[2px] after:rounded-full after:bg-white after:content-[''] after:transition-all after:duration-300 hover:after:w-full"
+              >
+                Email@gmail.com
+              </a>
+            </h1>
+          </div>
+
+          <div
+            class="flex flex-col sm:flex-row gap-10 sm:gap-[80px] lg:gap-[138px] text-left"
+          >
+            <div>
+              <h1 class="font-medium text-base leading-150 text-white">
+                Resources
+              </h1>
+              <p class="font-normal text-sm leading-136 text-white mt-[10px]">
+                <a
+                  href=""
+                  class="relative inline-block after:absolute after:left-0 after:bottom-[-4px] after:w-0 after:h-[2px] after:rounded-full after:bg-white after:content-[''] after:transition-all after:duration-300 hover:after:w-full"
+                >
+                  Roadmap
+                </a>
+              </p>
+              <p class="font-normal text-sm leading-136 text-white mt-[10px]">
+                <a
+                  href=""
+                  class="relative inline-block after:absolute after:left-0 after:bottom-[-4px] after:w-0 after:h-[2px] after:rounded-full after:bg-white after:content-[''] after:transition-all after:duration-300 hover:after:w-full"
+                >
+                  FAQs
+                </a>
+              </p>
+              <p class="font-normal text-sm leading-136 text-white mt-[10px]">
+                <a
+                  href=""
+                  class="relative inline-block after:absolute after:left-0 after:bottom-[-4px] after:w-0 after:h-[2px] after:rounded-full after:bg-white after:content-[''] after:transition-all after:duration-300 hover:after:w-full"
+                >
+                  Mint your Bully
+                </a>
+              </p>
+            </div>
+
+            <div>
+              <h1 class="font-medium text-base leading-150 text-white">
+                Community
+              </h1>
+
+              <div
+                class="flex items-center justify-between sm:justify-start gap-5 mt-[21px]"
+              >
+                <a
+                  class="hover:-translate-y-1 transition-all duration-300 ease-in-out"
+                  target="_blank"
+                  href="https://www.instagram.com/"
+                >
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.77751 5.85189C7.16534 5.85189 5.84969 7.16754 5.84969 8.7797C5.84969 10.3919 7.16534 11.7075 8.77751 11.7075C10.3897 11.7075 11.7053 10.3919 11.7053 8.7797C11.7053 7.16754 10.3897 5.85189 8.77751 5.85189ZM17.5588 8.7797C17.5588 7.56729 17.5697 6.36585 17.5016 5.15563C17.4336 3.74993 17.1129 2.50236 16.085 1.47444C15.0548 0.444328 13.8095 0.125849 12.4038 0.0577599C11.1914 -0.0103288 9.98993 0.000653309 8.7797 0.000653309C7.56729 0.000653309 6.36585 -0.0103288 5.15563 0.0577599C3.74993 0.125849 2.50236 0.446524 1.47444 1.47444C0.444328 2.50456 0.125849 3.74993 0.0577599 5.15563C-0.0103288 6.36805 0.000653309 7.56948 0.000653309 8.7797C0.000653309 9.98993 -0.0103288 11.1936 0.0577599 12.4038C0.125849 13.8095 0.446525 15.057 1.47444 16.085C2.50456 17.1151 3.74993 17.4336 5.15563 17.5016C6.36805 17.5697 7.56948 17.5588 8.7797 17.5588C9.99212 17.5588 11.1936 17.5697 12.4038 17.5016C13.8095 17.4336 15.057 17.1129 16.085 16.085C17.1151 15.0548 17.4336 13.8095 17.5016 12.4038C17.5719 11.1936 17.5588 9.99212 17.5588 8.7797ZM8.77751 13.2845C6.28458 13.2845 4.27267 11.2726 4.27267 8.7797C4.27267 6.28678 6.28458 4.27487 8.77751 4.27487C11.2704 4.27487 13.2823 6.28678 13.2823 8.7797C13.2823 11.2726 11.2704 13.2845 8.77751 13.2845ZM13.4668 5.14245C12.8848 5.14245 12.4148 4.67242 12.4148 4.09037C12.4148 3.50832 12.8848 3.03829 13.4668 3.03829C14.0489 3.03829 14.5189 3.50832 14.5189 4.09037C14.5191 4.22858 14.492 4.36547 14.4392 4.49319C14.3864 4.62091 14.3089 4.73696 14.2112 4.83469C14.1134 4.93242 13.9974 5.00991 13.8697 5.06272C13.7419 5.11553 13.6051 5.14262 13.4668 5.14245Z"
+                      fill="white"
+                    />
+                  </svg>
+                </a>
+                <a
+                  class="hover:-translate-y-1 transition-all duration-300 ease-in-out"
+                  target="_blank"
+                  href="https://x.com/"
+                >
+                  <svg
+                    width="19"
+                    height="16"
+                    viewBox="0 0 19 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18.6854 1.80181C17.9982 2.10629 17.26 2.31203 16.484 2.40502C17.2847 1.9259 17.8838 1.17183 18.1694 0.283513C17.4171 0.730353 16.5938 1.04488 15.7352 1.21342C15.1578 0.596937 14.393 0.188322 13.5596 0.0510151C12.7262 -0.0862918 11.8708 0.055391 11.1262 0.454067C10.3815 0.852742 9.78934 1.48611 9.44156 2.25582C9.09377 3.02554 9.00983 3.88855 9.20278 4.71085C7.67846 4.63432 6.18727 4.23812 4.82599 3.54798C3.4647 2.85784 2.26374 1.88917 1.30105 0.704851C0.971875 1.27267 0.782603 1.93101 0.782603 2.63214C0.782235 3.26332 0.937669 3.88484 1.23511 4.44154C1.53255 4.99824 1.96281 5.47291 2.4877 5.82345C1.87897 5.80408 1.28366 5.6396 0.751331 5.34368V5.39306C0.75127 6.27831 1.05749 7.13633 1.61802 7.82151C2.17856 8.50669 2.95889 8.97684 3.82661 9.15219C3.2619 9.30502 2.66985 9.32753 2.09517 9.21802C2.33999 9.97973 2.81687 10.6458 3.45906 11.123C4.10125 11.6002 4.87659 11.8647 5.67654 11.8794C4.31858 12.9454 2.6415 13.5236 0.915094 13.5211C0.609279 13.5212 0.303722 13.5033 0 13.4676C1.7524 14.5943 3.79232 15.1923 5.87569 15.19C12.9282 15.19 16.7836 9.34886 16.7836 4.28293C16.7836 4.11835 16.7795 3.95212 16.7721 3.78753C17.522 3.2452 18.1693 2.57363 18.6837 1.80428L18.6854 1.80181Z"
+                      fill="white"
+                    />
+                  </svg>
+                </a>
+                <a
+                  class="hover:-translate-y-1 transition-all duration-300 ease-in-out"
+                  target="_blank"
+                  href="https://discord.com/"
+                >
+                  <svg
+                    width="18"
+                    height="14"
+                    viewBox="0 0 18 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15.1852 1.11582C14.0417 0.600121 12.8159 0.21895 11.5342 0.00220494C11.5227 1.35143e-05 11.5109 0.00142575 11.5004 0.00624636C11.4898 0.011067 11.481 0.0190574 11.4751 0.0291112C11.3182 0.3049 11.1433 0.664397 11.0207 0.948407C9.66126 0.745293 8.27919 0.745293 6.91974 0.948407C6.78322 0.63365 6.62927 0.326742 6.4586 0.0291112C6.45282 0.0189337 6.44407 0.0107624 6.43352 0.0056879C6.42297 0.000613361 6.41112 -0.0011232 6.39956 0.00071008C5.11852 0.217455 3.89279 0.598626 2.74853 1.11508C2.73869 1.11921 2.73034 1.12625 2.72462 1.13526C0.398721 4.55459 -0.238807 7.88947 0.0743514 11.1825C0.0752228 11.1906 0.0777262 11.1984 0.0817094 11.2054C0.0856926 11.2125 0.0910721 11.2187 0.0975206 11.2236C1.45508 12.212 2.96926 12.9649 4.57666 13.4508C4.58787 13.4543 4.59985 13.4543 4.61105 13.4508C4.62225 13.4473 4.63214 13.4406 4.63944 13.4314C4.98474 12.968 5.29267 12.4785 5.55575 11.9643C5.57144 11.9344 5.5565 11.8985 5.52511 11.8865C5.04229 11.7047 4.57448 11.4853 4.12598 11.2303C4.11792 11.2257 4.11113 11.2192 4.10622 11.2113C4.1013 11.2035 4.09842 11.1945 4.09783 11.1852C4.09724 11.176 4.09895 11.1667 4.10282 11.1583C4.10669 11.1498 4.1126 11.1425 4.12 11.1369C4.21417 11.0674 4.30835 10.9949 4.39803 10.9224C4.40611 10.9159 4.41583 10.9117 4.42612 10.9104C4.43642 10.9091 4.44687 10.9107 4.45633 10.9149C7.39135 12.2333 10.57 12.2333 13.4707 10.9149C13.4801 10.9104 13.4907 10.9086 13.5012 10.9098C13.5116 10.911 13.5215 10.9151 13.5297 10.9216C13.6194 10.9949 13.7128 11.0674 13.8077 11.1369C13.8152 11.1424 13.8212 11.1496 13.8252 11.158C13.8292 11.1663 13.8311 11.1756 13.8306 11.1848C13.8302 11.1941 13.8274 11.2031 13.8227 11.211C13.8179 11.219 13.8112 11.2256 13.8033 11.2303C13.3563 11.4874 12.8914 11.7049 12.4034 11.8858C12.3959 11.8885 12.3891 11.8928 12.3834 11.8984C12.3776 11.9039 12.3732 11.9107 12.3703 11.9181C12.3674 11.9255 12.3661 11.9335 12.3665 11.9414C12.367 11.9494 12.3691 11.9572 12.3727 11.9643C12.6418 12.4777 12.9497 12.9665 13.2883 13.4307C13.2953 13.4402 13.3051 13.4473 13.3164 13.451C13.3276 13.4548 13.3397 13.455 13.3511 13.4516C14.9612 12.967 16.4779 12.2137 17.8369 11.2236C17.8436 11.219 17.8491 11.213 17.8533 11.206C17.8574 11.199 17.86 11.1913 17.8609 11.1832C18.2346 7.37601 17.2345 4.06803 15.2084 1.13675C15.2034 1.12723 15.1952 1.1198 15.1852 1.11582ZM5.99447 9.17723C5.11105 9.17723 4.38234 8.37826 4.38234 7.39843C4.38234 6.41785 5.09685 5.61963 5.99447 5.61963C6.89882 5.61963 7.6208 6.42457 7.6066 7.39843C7.6066 8.37901 6.89209 9.17723 5.99447 9.17723ZM11.9549 9.17723C11.0708 9.17723 10.3428 8.37826 10.3428 7.39843C10.3428 6.41785 11.0566 5.61963 11.9549 5.61963C12.8593 5.61963 13.5813 6.42457 13.5671 7.39843C13.5671 8.37901 12.86 9.17723 11.9549 9.17723Z"
+                      fill="white"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
