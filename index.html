@@ -15,6 +15,10 @@
       type="image/x-icon"
       href="./assets/images/Meta Bully.webp"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <style type="text/tailwindcss">
@@ -46,6 +50,30 @@
         --radius-pill: 45.5px;
         --radius-faq: 200px;
         --radius-card: 20px;
+
+        --animate-float: float 4s ease-in-out infinite;
+        --animate-glow: glow 6s ease-in-out infinite;
+
+        @keyframes float {
+          0%,
+          100% {
+            translate: 0 0;
+          }
+          50% {
+            translate: 0 -18px;
+          }
+        }
+        @keyframes glow {
+          0%,
+          100% {
+            opacity: 0.55;
+            scale: 1;
+          }
+          50% {
+            opacity: 1;
+            scale: 1.25;
+          }
+        }
       }
     </style>
   </head>
@@ -93,6 +121,7 @@
         class="container max-w-[1329px] mx-auto pt-[100px] sm:pt-[180px] lg:pt-[261.38px]"
       >
         <h1
+          data-aos="fade-right"
           class="max-w-[515px] w-full font-normal text-[38px] sm:text-[50px] lg:text-[70px] leading-130 lg:leading-124 text-pure-white pb-5 sm:pb-[27px]"
         >
           Vitae nunc,
@@ -102,29 +131,33 @@
           >
         </h1>
         <p
+          data-aos="fade-up"
+          data-aos-delay="200"
           class="max-w-[547px] font-medium text-[16px] sm:text-[18px] lg:text-[20px] leading-28px sm:leading-34px lg:leading-41px text-pure-white pb-8 sm:pb-[46px]"
         >
           Semper in egestas risus id tempus. Pellentesque dolor eros
           sollicitudin feugiat ut odio semper. Mattis fermentum eget ut
           vestibulum dolor diam
         </p>
-        <button
-          class="group relative isolate w-[180px] sm:w-[225px] h-[55px] sm:h-[69px] overflow-hidden rounded-pill border-2 border-primary-navy bg-pure-white font-medium text-[18px] sm:text-[22px] lg:text-[25px] leading-100 text-primary-navy cursor-pointer transition-all duration-500"
-        >
-          <span
-            class="absolute inset-[2px] z-0 rounded-pill bg-primary-navy scale-x-0 origin-left transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-x-100"
-          ></span>
-
-          <span
-            class="absolute inset-0 z-10 rounded-pill opacity-0 shadow-[inset_0_0_20px_rgba(255,255,255,0.12)] transition-opacity duration-700 group-hover:opacity-100"
-          ></span>
-
-          <span
-            class="relative z-20 transition-colors duration-500 ease-out group-hover:text-pure-white"
+        <div data-aos="zoom-in" data-aos-delay="400" class="w-fit">
+          <button
+            class="group relative isolate w-[180px] sm:w-[225px] h-[55px] sm:h-[69px] overflow-hidden rounded-pill border-2 border-primary-navy bg-pure-white font-medium text-[18px] sm:text-[22px] lg:text-[25px] leading-100 text-primary-navy cursor-pointer transition-all duration-500"
           >
-            Get Started
-          </span>
-        </button>
+            <span
+              class="absolute inset-[2px] z-0 rounded-pill bg-primary-navy scale-x-0 origin-left transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-x-100"
+            ></span>
+
+            <span
+              class="absolute inset-0 z-10 rounded-pill opacity-0 shadow-[inset_0_0_20px_rgba(255,255,255,0.12)] transition-opacity duration-700 group-hover:opacity-100"
+            ></span>
+
+            <span
+              class="relative z-20 transition-colors duration-500 ease-out group-hover:text-pure-white"
+            >
+              Get Started
+            </span>
+          </button>
+        </div>
       </div>
     </section>
 
@@ -138,15 +171,16 @@
           >
             <div
               class="w-full max-w-[320px] sm:max-w-[450px] lg:max-w-[574px] aspect-square shrink-0 relative"
+              data-aos="fade-right"
             >
               <img
                 id="changing-img"
                 src="./assets/images/Mint Your Bat.webp"
-                class="w-full h-full object-contain"
+                class="w-full h-full object-contain animate-float motion-reduce:animate-none"
                 alt="Mint Your Bat"
               />
               <div
-                class="cirle size-[clamp(320px,92vw,337px)] bg-accent-blue rounded-full absolute top-1/2 left-1/2 blur-[300px] -z-20 -translate-y-1/2 -translate-x-1/2"
+                class="animate-glow motion-reduce:animate-none cirle size-[clamp(320px,92vw,337px)] bg-accent-blue rounded-full absolute top-1/2 left-1/2 blur-[300px] -z-20 -translate-y-1/2 -translate-x-1/2"
               ></div>
             </div>
 
@@ -154,52 +188,66 @@
               class="flex flex-col lg:mt-[156px] lg:mr-[173px] text-center lg:text-left"
             >
               <h1
+                data-aos="fade-left"
                 class="max-w-[338px] w-full font-semibold text-[38px] sm:text-[45px] lg:text-[50px] leading-136 text-pure-white pb-[35px] lg:pb-[48px] mx-auto lg:mx-0"
               >
                 Mint Your Bat
               </h1>
 
               <h2
+                data-aos="fade-left"
+                data-aos-delay="100"
                 class="max-w-[228px] w-full font-medium text-[24px] sm:text-[28px] lg:text-3xl leading-136 text-pure-white mx-auto lg:mx-0"
               >
                 Minting: 1,5 SOL
               </h2>
               <span
+                data-aos="fade-left"
+                data-aos-delay="200"
                 class="max-w-[98px] w-full opacity-50 font-normal text-base leading-136 text-pure-white line-through pb-[21px] mx-auto lg:mx-0"
                 >Before 2 SOL</span
               >
 
               <h2
+                data-aos="fade-left"
+                data-aos-delay="300"
                 class="max-w-[273px] w-full font-medium text-[24px] sm:text-[28px] lg:text-3xl leading-136 text-pure-white mx-auto lg:mx-0"
               >
                 Whitelist: 0,88 SOL
               </h2>
               <span
+                data-aos="fade-left"
+                data-aos-delay="400"
                 class="max-w-[94px] w-full opacity-50 font-normal text-base leading-136 text-pure-white line-through pb-[45px] lg:pb-[63px] mx-auto lg:mx-0"
                 >Before 1 SOL</span
               >
 
-              <button
-                class="group relative isolate w-[149px] h-[44px] overflow-hidden rounded-pill border-none bg-pure-white font-medium text-base leading-100 text-primary-navy cursor-pointer mx-auto lg:mx-0"
-              >
-                <!-- Navy inner fill -->
-                <span
-                  class="absolute inset-[2px] z-0 origin-left scale-x-0 rounded-pill bg-primary-navy transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-x-100"
-                ></span>
-
-                <!-- Subtle inner highlight -->
-                <span
-                  class="absolute inset-0 z-10 rounded-pill opacity-0 shadow-[inset_0_0_16px_rgba(255,255,255,0.12)] transition-opacity duration-700 group-hover:opacity-100"
-                ></span>
-
-                <!-- Text -->
-                <span
-                  class="relative z-20 transition-colors duration-500 ease-out group-hover:text-pure-white"
-                >
-                  Coming soon
-                </span>
-              </button>
               <div
+                data-aos="zoom-in"
+                data-aos-delay="500"
+                class="mx-auto lg:mx-0 w-fit"
+              >
+                <button
+                  class="group relative isolate w-[149px] h-[44px] overflow-hidden rounded-pill border-none bg-pure-white font-medium text-base leading-100 text-primary-navy cursor-pointer mx-auto lg:mx-0"
+                >
+                  <span
+                    class="absolute inset-[2px] z-0 origin-left scale-x-0 rounded-pill bg-primary-navy transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-x-100"
+                  ></span>
+
+                  <span
+                    class="absolute inset-0 z-10 rounded-pill opacity-0 shadow-[inset_0_0_16px_rgba(255,255,255,0.12)] transition-opacity duration-700 group-hover:opacity-100"
+                  ></span>
+
+                  <span
+                    class="relative z-20 transition-colors duration-500 ease-out group-hover:text-pure-white"
+                  >
+                    Coming soon
+                  </span>
+                </button>
+              </div>
+              <div
+                data-aos="fade-up"
+                data-aos-delay="600"
                 class="flex items-center justify-center lg:justify-start gap-[23.88px] mt-[52.1px]"
               >
                 <a
@@ -264,7 +312,7 @@
       </section>
 
       <div
-        class="circle absolute size-[337px] bg-accent-blue rounded-full right-[-200px] blur-[250px] -z-20"
+        class="animate-glow motion-reduce:animate-none circle absolute size-[337px] bg-accent-blue rounded-full right-[-200px] blur-[250px] -z-20"
       ></div>
 
       <section class="px-4 sm:px-5 pb-4">
@@ -285,6 +333,7 @@
           class="container max-w-[938.58px] mx-auto flex flex-col items-center"
         >
           <h1
+            data-aos="fade-down"
             class="max-w-[252px] w-full font-semibold text-[36px] sm:text-[42px] md:text-[50px] leading-136 text-pure-white mb-[50px] md:mb-[63px]"
           >
             Roadmap
@@ -292,7 +341,7 @@
 
           <div class="max-w-[938.58px] w-full flex flex-row md:justify-between">
             <div class="md:flex hidden flex-col items-start justify-center">
-              <div class="max-w-[404.58px] text-right">
+              <div data-aos="fade-right" class="max-w-[404.58px] text-right">
                 <h2 class="font-semibold text-3xl leading-150 text-pure-white">
                   Q-1, 2022
                 </h2>
@@ -308,6 +357,8 @@
 
             <div class="flex flex-col justify-between h-[795px] relative mx-3">
               <div
+                data-aos="zoom-in"
+                data-aos-duration="700"
                 class="w-[64.92px] h-[64.92px] rounded-full bg-timeline-navy flex items-center justify-center -mt-[11px]"
               >
                 <div
@@ -315,6 +366,8 @@
                 ></div>
               </div>
               <div
+                data-aos="zoom-in"
+                data-aos-duration="700"
                 class="w-[64.92px] h-[64.92px] rounded-full bg-timeline-navy flex items-center justify-center"
               >
                 <div
@@ -322,6 +375,8 @@
                 ></div>
               </div>
               <div
+                data-aos="zoom-in"
+                data-aos-duration="700"
                 class="w-[64.92px] h-[64.92px] rounded-full bg-timeline-navy flex items-center justify-center"
               >
                 <div
@@ -329,7 +384,11 @@
                 ></div>
               </div>
 
-              <div class="absolute left-[50%] top-[2%]">
+              <div
+                data-aos="fade-down"
+                data-aos-duration="1600"
+                class="absolute left-[50%] top-[2%]"
+              >
                 <svg
                   width="2"
                   height="740"
@@ -352,7 +411,7 @@
             </div>
 
             <div class="flex flex-col items-end justify-between min-h-[924px]">
-              <div class="max-w-[404.58px] text-left">
+              <div data-aos="fade-left" class="max-w-[404.58px] text-left">
                 <h2
                   class="max-w-[138px] font-semibold text-3xl leading-150 text-pure-white"
                 >
@@ -368,7 +427,7 @@
               </div>
 
               <div class="flex flex-col justify-center md:hidden">
-                <div class="max-w-[404.58px] text-left">
+                <div data-aos="fade-left" class="max-w-[404.58px] text-left">
                   <h2
                     class="font-semibold text-3xl leading-150 text-pure-white"
                   >
@@ -384,7 +443,7 @@
                 </div>
               </div>
 
-              <div class="max-w-[404.58px] text-left">
+              <div data-aos="fade-left" class="max-w-[404.58px] text-left">
                 <h2
                   class="max-w-[138px] font-semibold text-3xl leading-150 text-pure-white"
                 >
@@ -403,11 +462,11 @@
         </div>
       </section>
       <div
-        class="cirle size-[clamp(320px,92vw,337px)] bg-accent-blue rounded-full absolute top-0 left-0 blur-[300px] -z-20 translate-y-1/2 -translate-x-1/2"
+        class="animate-glow motion-reduce:animate-none cirle size-[clamp(320px,92vw,337px)] bg-accent-blue rounded-full absolute top-0 left-0 blur-[300px] -z-20 translate-y-1/2 -translate-x-1/2"
       ></div>
 
       <div
-        class="cirle size-[clamp(320px,92vw,337px)] bg-accent-blue rounded-full absolute top-2/3 right-0 translate-x-1/2 blur-[250px]"
+        class="animate-glow motion-reduce:animate-none cirle size-[clamp(320px,92vw,337px)] bg-accent-blue rounded-full absolute top-2/3 right-0 translate-x-1/2 blur-[250px]"
       ></div>
 
       <section class="px-4 sm:px-5 relative pb-4">
@@ -415,13 +474,17 @@
           class="container max-w-[786px] mx-auto text-center pt-[60px] md:pt-[80px] lg:pt-[141px]"
         >
           <h1
+            data-aos="fade-up"
             class="font-medium text-[20px] sm:text-[25px] lg:text-[30px] leading-140 sm:leading-150 text-white"
           >
             And this just the begining , the team is working on more suprises
             for our community. Buddybullies stronger together !!
           </h1>
         </div>
-        <div class="mx-auto w-[129px] mt-[70px] sm:mt-[90px] lg:mt-[110px]">
+        <div
+          data-aos="zoom-in"
+          class="mx-auto w-[129px] mt-[70px] sm:mt-[90px] lg:mt-[110px]"
+        >
           <h1
             class="font-semibold text-[36px] sm:text-[42px] lg:text-[50px] leading-136 text-white"
           >
@@ -432,7 +495,7 @@
         <div
           class="faq gap-[20px] sm:gap-[26px] mt-[35px] sm:mt-[47px] flex flex-col"
         >
-          <div class="faqitem">
+          <div class="faqitem" data-aos="fade-up" data-aos-delay="0">
             <button
               class="faqbutton max-w-[830px] w-full mx-auto border-none rounded-faq bg-card-navy flex items-center justify-between cursor-pointer py-4 sm:py-5 px-3 sm:pr-[33px] sm:pl-[32px] gap-4"
             >
@@ -473,7 +536,7 @@
             </div>
           </div>
 
-          <div class="faqitem">
+          <div class="faqitem" data-aos="fade-up" data-aos-delay="100">
             <button
               class="faqbutton max-w-[830px] w-full mx-auto border-none rounded-faq bg-card-navy flex items-center justify-between cursor-pointer py-4 sm:py-5 px-3 sm:pr-[33px] sm:pl-[32px] gap-4"
             >
@@ -514,7 +577,7 @@
             </div>
           </div>
 
-          <div class="faqitem">
+          <div class="faqitem" data-aos="fade-up" data-aos-delay="200">
             <button
               class="faqbutton max-w-[830px] w-full mx-auto border-none rounded-faq bg-card-navy flex items-center justify-between cursor-pointer py-4 sm:py-5 px-3 sm:pr-[33px] sm:pl-[32px] gap-4"
             >
@@ -555,7 +618,7 @@
             </div>
           </div>
 
-          <div class="faqitem">
+          <div class="faqitem" data-aos="fade-up" data-aos-delay="300">
             <button
               class="faqbutton max-w-[830px] w-full mx-auto border-none rounded-faq bg-card-navy flex items-center justify-between cursor-pointer py-4 sm:py-5 px-3 sm:pr-[33px] sm:pl-[32px] gap-4"
             >
@@ -603,7 +666,10 @@
       <div
         class="container max-w-[1035px] mx-auto text-center pt-[60px] md:pt-[80px] lg:pt-[121px]"
       >
-        <h1 class="font-semibold text-[50px] leading-136 text-white pb-[26px]">
+        <h1
+          data-aos="fade-down"
+          class="font-semibold text-[50px] leading-136 text-white pb-[26px]"
+        >
           Our Team
         </h1>
         <div
@@ -627,11 +693,13 @@
           class="flex md:flex-row flex-col justify-between items-center md:items-start gap-14 md:gap-8 mt-[70px] sm:mt-[90px] lg:mt-[106px]"
         >
           <div class="text-center md:text-left">
-            <h2
-              class="font-medium text-[26px] sm:text-[30px] leading-124 text-white"
-            >
-              LOGO
-            </h2>
+            <a href=""
+              ><h2
+                class="font-medium text-[26px] sm:text-[30px] leading-124 text-white"
+              >
+                LOGO
+              </h2>
+            </a>
             <p
               class="max-w-[388px] font-normal text-[14px] sm:text-base leading-150 text-footer-muted mt-[21px]"
             >
@@ -754,6 +822,7 @@
       </div>
     </footer>
 
-    <script src="./assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>

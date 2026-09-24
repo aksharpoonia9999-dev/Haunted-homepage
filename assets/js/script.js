@@ -181,9 +181,10 @@ const CARDS = [
 
 const card = document.getElementById("card");
 
-CARDS.forEach((item) => {
+CARDS.forEach((item, index) => {
   card.innerHTML += `
-    <div class="max-w-[426px] cursor-pointer lg:min-h-[511px] md:min-h-[460px] min-h-[400px] lg:pt-[39px] lg:pb-[34px] md:py-8 py-6 lg:pl-[39px] lg:pr-10 md:px-8 sm:px-7 px-6 rounded-card bg-card-navy">
+    <div data-aos="fade-up" data-aos-delay="${(index % 3) * 150}" class="w-full max-w-[426px]">
+    <div class="group h-full max-w-[426px] cursor-pointer lg:min-h-[511px] md:min-h-[460px] min-h-[400px] lg:pt-[39px] lg:pb-[34px] md:py-8 py-6 lg:pl-[39px] lg:pr-10 md:px-8 sm:px-7 px-6 rounded-card bg-card-navy transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_15px_45px_rgba(0,157,255,0.25)]">
       <div class="flex flex-col">
         <img class="md:w-[117px] md:h-[145px] w-[100px] h-[120px]" src="${item.Image}" alt="">
         <h1 class="font-semibold lg:text-[30px] md:text-[26px] text-2xl leading-100 lg:mt-[44px] md:mt-8 mt-4 text-white">
@@ -193,6 +194,7 @@ CARDS.forEach((item) => {
           ${item.para}
         </p>
       </div>
+    </div>
     </div>
   `;
 });
@@ -262,10 +264,10 @@ let TEAM_DATA = [
 
 const ourteam = document.getElementById("ourTeam");
 
-TEAM_DATA.forEach((item) => {
+TEAM_DATA.forEach((item, index) => {
   ourteam.innerHTML += `
-    <div class="flex flex-col items-center justify-center">
-      <img class="${item.height} ${item.weidth} ${item.objectFit}" src="${item.Image}" alt="">
+    <div data-aos="zoom-in-up" data-aos-delay="${(index % 3) * 150}" class="flex flex-col items-center justify-center">
+      <img class="${item.height} ${item.weidth} ${item.objectFit || ""} transition-transform duration-500 hover:scale-105 hover:-rotate-2" src="${item.Image}" alt="">
 
       <div class="flex flex-col text-center mt-8">
         <h1 class="font-semibold text-[30px] leading-136 text-white">${item.heading}</h1>
@@ -274,3 +276,16 @@ TEAM_DATA.forEach((item) => {
     </div>
   `;
 });
+
+// AOS Animation
+if (typeof AOS !== "undefined") {
+  AOS.init({
+    duration: 900,
+    easing: "ease-out-cubic",
+    once: true,
+    offset: 80,
+    disable: window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+  });
+
+  window.addEventListener("load", () => AOS.refresh());
+}
